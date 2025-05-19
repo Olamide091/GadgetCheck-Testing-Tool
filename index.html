@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GadgetCheck - Hardware Tester</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="image/favicon.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+     <body>
+
+        <!-- These are the custom cursor elements -->
+  <div class="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+  
+    <header class="header">
+        <div class="logo">
+           <span class="animated-text">🔧 GadgetCheck</span>
+        </div>  
+        <div>  
+           <p>Test your hardware devices directly from your browser. </p>
+        </div> 
+    </header>
+
+   <section class="background-slideshow"> 
+  <h1 class="headline">Explore Smart <br> Testing Tools</h1>
+  <p class="subtext">
+    GadgetCheck is your all-in-one tool for testing hardware components<br>
+    like keyboards, screens, speakers, and more — right from your browser.<br> 
+    Whether you're a technician, buyer, or everyday user, GadgetCheck <br>
+    helps you detect issues quickly and confidently.
+  </p>
+</section>
+
+<section class="testing-tools">
+  <h2>Test Your Hardware Components</h2>
+  <div class="tools-grid">
+
+ <div class="tool-card visible" id="keyboard-test-section">
+  <img src="image/keyboard.png" alt="Keyboard Test" />
+  <h3>Keyboard Test</h3>
+  <p>Press any key to see if it's working. Working keys light up!</p>
+  <button onclick="startKeyboardTest()">Start Test</button>
+
+  <div id="keyboard-display" class="keyboard-display" style="display: none; flex-wrap: wrap; margin-top: 10px; gap: 5px;"></div>
+</div>
+
+
+  <div class="tool-card visible">
+  <img src="image/Screen.jpg" alt="Screen Test" />
+  <h3>Screen Test</h3>
+  <p>Detect dead pixels, color accuracy, and brightness levels.</p>
+  <button class="screen-test-btn">Start Test</button>
+</div>
+
+
+    <div class="tool-card visible" id="speaker-test">
+  <img src="image/Speaker.png" alt="Speaker Test" />
+  <h3>Speaker Test</h3>
+  <p>Test the quality and volume of your device’s speakers.</p>
+  <button onclick="startSpeakerTest()">Start Test</button>
+  
+  <div class="audio-list" style="display: none;">
+    <p>Select a track to play:</p>
+    <div class="track">
+      <button onclick="playTrack('track1')">Play Track 1</button>
+    </div>
+    <div class="track">
+      <button onclick="playTrack('track2')">Play Track 2</button>
+    </div>
+    <div class="track">
+      <button onclick="playTrack('track3')">Play Track 3</button>
+    </div>
+  </div>
+
+  <!-- Hidden audio elements -->
+  <audio id="track1" src="image/audio/track1.mp3"></audio>
+  <audio id="track2" src="image/audio/track2.mp3"></audio>
+  <audio id="track3" src="image/audio/track3.mp3"></audio>
+</div>
+
+  <!-- Hidden cards initially --> 
+<div class="tool-card">
+  <img src="image/Microphone.jpg" alt="Microphone Test" />
+  <h3>Microphone Test</h3>
+  <p>Verify microphone clarity and noise levels.</p>
+  <button onclick="startMicrophoneTest()">Start Test</button>
+  <div id="mic-result" style="margin-top: 10px; font-weight: bold;"></div>
+</div>
+
+<div class="tool-card">
+  <img src="image/mouse.png" alt="Mouse Test" />
+  <h3>Mouse Test</h3>
+  <p>Check buttons, scroll wheel, and cursor movement accuracy.</p>
+  <button onclick="startMouseTest()">Start Test</button>
+  <div id="mouse-status" style="margin-top: 10px; font-weight: bold;"></div>
+</div>
+
+<div class="tool-card">
+  <img src="image/Battery.jpg" alt="Battery Test" />
+  <h3>Battery Test</h3>
+  <p>Monitor battery health and charge cycles.</p>
+  <button onclick="startBatteryTest()">Start Test</button>
+  <div class="battery-info" id="battery-info" style="display: none; margin-top: 10px; font-weight: bold;"></div>
+</div>
+ 
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <h2 class="contact-title">Get in Touch</h2>
+  <p class="contact-subtitle">Feel free to reach out for collaborations, questions, or just to connect!</p>
+
+  <div class="contact-links">
+    <a href="https://wa.me/2349037022997" target="_blank" class="contact-card whatsapp">
+      <i class="fab fa-whatsapp"></i>
+      <span>Chat on WhatsApp</span>
+    </a>
+    <a href="https://www.linkedin.com/in/abolarinwa-ismail-b64065282" target="_blank" class="contact-card linkedin">
+      <i class="fab fa-linkedin-in"></i>
+      <span>View LinkedIn</span>
+    </a>
+    <a href="https://github.com/Olamide091" target="_blank" class="contact-card github">
+      <i class="fab fa-github"></i>
+      <span>Visit GitHub</span>
+    </a>
+  </div>
+</section>
+
+      <script src="script.js"></script>
+    </body>
+</html>
+       
